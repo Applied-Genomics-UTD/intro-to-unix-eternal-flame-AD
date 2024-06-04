@@ -41,4 +41,209 @@ root@localhost:~/tutorial# grep \&gt; sequences.fa
 &gt;chr5:8817770-8817869
 &gt;chr5:11423126-11423225
 &gt;chr5:150317286-150317385
+root@localhost:~/tutorial# grep \&gt; sequences.fa  &gt; sequences.txt
+root@localhost:~/tutorial# cat chromosomes.txt
+chr18
+chr4
+chr21
+chr7
+chr12
+chr11
+chr1
+chrM
+chr19
+chrX
+chr17
+chr22
+chr8
+chr13
+chr3
+chr14
+chr10
+chrY
+chr16
+chr20
+chr6
+chr5
+chr15
+chr2
+chr9
+root@localhost:~/tutorial# sort -n chromosomes.txt
+chr1
+chr10
+chr11
+chr12
+chr13
+chr14
+chr15
+chr16
+chr17
+chr18
+chr19
+chr2
+chr20
+chr21
+chr22
+chr3
+chr4
+chr5
+chr6
+chr7
+chr8
+chr9
+chrM
+chrX
+chrY
+root@localhost:~/tutorial# sort chromosomes.txt -V &gt; chromosomes.sorted.txt
+root@localhost:~/tutorial# samtools sort alignments.bam &gt; alignments.sorted.bam
+root@localhost:~/tutorial# samtools index alignments.sorted.bam &gt; alignments.index.bam
+root@localhost:~/tutorial# samtools index alignments.sorted.bam &gt; alignments.fixedbam
+root@localhost:~/tutorial# samtools index alignments.sorted.bam &gt; alignments.ifixed.am
+root@localhost:~/tutorial# samtools index alignments.sorted.bam &gt; alignments.ifixedb.a
+^C
+root@localhost:~/tutorial# samtools index alignments.sorted.bam &gt; alignments.fixed.bam
+root@localhost:~/tutorial# samtools view alignments.fixed.bam ref2:10-11
+[main_samview] fail to read the header from "alignments.fixed.bam".
+root@localhost:~/tutorial# cat alignments.fixed.bam 
+root@localhost:~/tutorial# ll
+total 10K
+ 512 drwx------ 4 root root    0 Feb 23 03:54 ..
+ 512 drwxr-xr-x 2 root root    0 Feb 23 03:54 .
+1.0K -rw-r--r-- 1 root root 1008 Jun  4  2024 exons.bed
+ 512 -rw-r--r-- 1 root root  138 Jun  4  2024 chromosomes.txt
+1.0K -rw-r--r-- 1 root root  558 Jun  4  2024 alignments.bam
+2.0K -rw-r--r-- 1 root root 2.0K Jun  4  2024 sequences.fa
+ 512 -rw-r--r-- 1 root root  391 Jun  4  2024 sequences.txt
+ 512 -rw-r--r-- 1 root root  138 Jun  4  2024 chromosomes.sorted.txt
+1.0K -rw-r--r-- 1 root root  584 Jun  4  2024 alignments.sorted.bam
+ 512 -rw-r--r-- 1 root root    0 Jun  4  2024 alignments.index.bam
+ 512 -rw-r--r-- 1 root root    0 Jun  4  2024 alignments.ifixedbam
+ 512 -rw-r--r-- 1 root root    0 Jun  4  2024 alignments.ifixedb.am
+ 512 -rw-r--r-- 1 root root    0 Jun  4  2024 alignments.fixed.bam
+ 512 -rw-r--r-- 1 root root  176 Jun  4  2024 alignments.sorted.bam.bai
+root@localhost:~/tutorial# rm alignments.ifixedb*
+root@localhost:~/tutorial# ll
+total 9.5K
+ 512 drwx------ 4 root root    0 Feb 23 03:54 ..
+1.0K drwxr-xr-x 2 root root    0 Feb 23 03:54 .
+1.0K -rw-r--r-- 1 root root 1008 Jun  4  2024 exons.bed
+ 512 -rw-r--r-- 1 root root  138 Jun  4  2024 chromosomes.txt
+1.0K -rw-r--r-- 1 root root  558 Jun  4  2024 alignments.bam
+2.0K -rw-r--r-- 1 root root 2.0K Jun  4  2024 sequences.fa
+ 512 -rw-r--r-- 1 root root  391 Jun  4  2024 sequences.txt
+chr1 11873 12227 NR_046018_exon_0_0_chr1_11874_f 0 +
+chr1    12612   12721   NR_046018_exon_1_0_chr1_12613_f 0       +
+chr173 12227 NR_046018_exon_0_0_chr1_11874_f 0 +
+chr1    14969   15038   NR_024540_exon_1_0_chr1_14970_r 0-
+chr1 11873 12227 NR_046018_exon_0_0_chr1_11874_f 0 +
+chr1    12612   12721   NR_046018_exon_1_0_chr1_12613_f 0       +
+chr1    14361   14829   NR_024540_exon_0_0_chr1_14362_r 0       -
+chr1    14969   15038   NR_024540_exon_1_0_chr1_14970_r 0-
+chr1    15795   15947   NR_024540_exon_2_0_chr1_15796_r 0-
+chr1    16606   16765   NR_024540_exon_3_0_chr1_16607_r 0-
+chr1    16857   17055   NR_024540_exon_4_0_chr1_16858_r 0-
+chr1    17232   17368   NR_024540_exon_5_0_chr1_17233_r 0-
+chr1    17605   17742   NR_024540_exon_6_0_chr1_17606_r 0-
+chr1    17914   18061   NR_024540_exon_7_0_chr1_17915_r 0-
+chr1    18267   18366   NR_024540_exon_8_0_chr1_18268_r 0-
+chr1    24737   24891   NR_024540_exon_9_0_chr1_24738_r 0-
+chr1    29320   29370   NR_024540_exon_10_0_chr1_29321_r0-
+chr1    34610   35174   NR_026818_exon_0_0_chr1_34611_r 0-
+chr1    34610   35174   NR_026820_exon_0_0_chr1_34611_r 0-
+chr1    35276   35481   NR_026818_exon_1_0_chr1_35277_r 0-
+chr1    35276   35481   NR_026820_exon_1_0_chr1_35277_r 0-
+chr1    35720   36081   NR_026818_exon_2_0_chr1_35721_r 0-
+chr1    35720   36081   NR_026820_exon_2_0_chr1_35721_r 0-
+<span style="font-weight:bold">~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~</span>exons.bed" 19L, 1008B1,1A<span style="font-weight:bold">-- INSERT --</span>1,5A
+1,4A
+root@localhost:~/tutorial# ll
+total 9.0K
+ 512 drwx------ 4 root root    0 Feb 23 03:54 ..
+ 512 drwxr-xr-x 2 root root    0 Feb 23 03:54 .
+1.0K -rw-r--r-- 1 root root 1008 Jun  4  2024 exons.bed
+ 512 -rw-r--r-- 1 root root  138 Jun  4  2024 chromosomes.txt
+1.0K -rw-r--r-- 1 root root  558 Jun  4  2024 alignments.bam
+2.0K -rw-r--r-- 1 root root 2.0K Jun  4  2024 sequences.fa
+ 512 -rw-r--r-- 1 root root  391 Jun  4  2024 sequences.txt
+ 512 -rw-r--r-- 1 root root  138 Jun  4  2024 chromosomes.sorted.txt
+1.0K -rw-r--r-- 1 root root  584 Jun  4  2024 alignments.sorted.bam
+ 512 -rw-r--r-- 1 root root    0 Jun  4  2024 alignments.index.bam
+ 512 -rw-r--r-- 1 root root    0 Jun  4  2024 alignments.fixed.bam
+ 512 -rw-r--r-- 1 root root  176 Jun  4  2024 alignments.sorted.bam.bai
+root@localhost:~/tutorial# sed "s/ /\t/g" exons.bed 
+chr11187312227NR_046018_exon_0_0_chr1_11874_f0+
+chr11261212721NR_046018_exon_1_0_chr1_12613_f0+
+chr11436114829NR_024540_exon_0_0_chr1_14362_r0-
+chr11496915038NR_024540_exon_1_0_chr1_14970_r0-
+chr11579515947NR_024540_exon_2_0_chr1_15796_r0-
+chr11660616765NR_024540_exon_3_0_chr1_16607_r0-
+chr11685717055NR_024540_exon_4_0_chr1_16858_r0-
+chr11723217368NR_024540_exon_5_0_chr1_17233_r0-
+chr11760517742NR_024540_exon_6_0_chr1_17606_r0-
+chr11791418061NR_024540_exon_7_0_chr1_17915_r0-
+chr11826718366NR_024540_exon_8_0_chr1_18268_r0-
+chr12473724891NR_024540_exon_9_0_chr1_24738_r0-
+chr12932029370NR_024540_exon_10_0_chr1_29321_r0-
+chr13461035174NR_026818_exon_0_0_chr1_34611_r0-
+chr13461035174NR_026820_exon_0_0_chr1_34611_r0-
+chr13527635481NR_026818_exon_1_0_chr1_35277_r0-
+chr13527635481NR_026820_exon_1_0_chr1_35277_r0-
+chr13572036081NR_026818_exon_2_0_chr1_35721_r0-
+chr13572036081NR_026820_exon_2_0_chr1_35721_r0-
+root@localhost:~/tutorial# sed -E "s/ +/\t/g" exons.bed 
+chr11187312227NR_046018_exon_0_0_chr1_11874_f0+
+chr11261212721NR_046018_exon_1_0_chr1_12613_f0+
+chr11436114829NR_024540_exon_0_0_chr1_14362_r0-
+chr11496915038NR_024540_exon_1_0_chr1_14970_r0-
+chr11579515947NR_024540_exon_2_0_chr1_15796_r0-
+chr11660616765NR_024540_exon_3_0_chr1_16607_r0-
+chr11685717055NR_024540_exon_4_0_chr1_16858_r0-
+chr11723217368NR_024540_exon_5_0_chr1_17233_r0-
+chr11760517742NR_024540_exon_6_0_chr1_17606_r0-
+chr11791418061NR_024540_exon_7_0_chr1_17915_r0-
+chr11826718366NR_024540_exon_8_0_chr1_18268_r0-
+chr12473724891NR_024540_exon_9_0_chr1_24738_r0-
+chr12932029370NR_024540_exon_10_0_chr1_29321_r0-
+chr13461035174NR_026818_exon_0_0_chr1_34611_r0-
+chr13461035174NR_026820_exon_0_0_chr1_34611_r0-
+chr13527635481NR_026818_exon_1_0_chr1_35277_r0-
+chr13527635481NR_026820_exon_1_0_chr1_35277_r0-
+chr13572036081NR_026818_exon_2_0_chr1_35721_r0-
+chr13572036081NR_026820_exon_2_0_chr1_35721_r0-
+root@localhost:~/tutorial# sed -E "s/ +/\t/g" exons.bed  &gt; exons.fixed.bed
+root@localhost:~/tutorial# head exons.fixed.bed 
+chr11187312227NR_046018_exon_0_0_chr1_11874_f0+
+chr11261212721NR_046018_exon_1_0_chr1_12613_f0+
+chr11436114829NR_024540_exon_0_0_chr1_14362_r0-
+chr11496915038NR_024540_exon_1_0_chr1_14970_r0-
+chr11579515947NR_024540_exon_2_0_chr1_15796_r0-
+chr11660616765NR_024540_exon_3_0_chr1_16607_r0-
+chr11685717055NR_024540_exon_4_0_chr1_16858_r0-
+chr11723217368NR_024540_exon_5_0_chr1_17233_r0-
+chr11760517742NR_024540_exon_6_0_chr1_17606_r0-
+chr11791418061NR_024540_exon_7_0_chr1_17915_r0-
 root@localhost:~/tutorial# </pre></body></html>
