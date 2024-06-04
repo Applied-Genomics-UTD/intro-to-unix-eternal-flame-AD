@@ -246,4 +246,90 @@ chr11685717055NR_024540_exon_4_0_chr1_16858_r0-
 chr11723217368NR_024540_exon_5_0_chr1_17233_r0-
 chr11760517742NR_024540_exon_6_0_chr1_17606_r0-
 chr11791418061NR_024540_exon_7_0_chr1_17915_r0-
+root@localhost:~/tutorial# cat exons.fixed.bed 
+chr11187312227NR_046018_exon_0_0_chr1_11874_f0+
+chr11261212721NR_046018_exon_1_0_chr1_12613_f0+
+chr11436114829NR_024540_exon_0_0_chr1_14362_r0-
+chr11496915038NR_024540_exon_1_0_chr1_14970_r0-
+chr11579515947NR_024540_exon_2_0_chr1_15796_r0-
+chr11660616765NR_024540_exon_3_0_chr1_16607_r0-
+chr11685717055NR_024540_exon_4_0_chr1_16858_r0-
+chr11723217368NR_024540_exon_5_0_chr1_17233_r0-
+chr11760517742NR_024540_exon_6_0_chr1_17606_r0-
+chr11791418061NR_024540_exon_7_0_chr1_17915_r0-
+chr11826718366NR_024540_exon_8_0_chr1_18268_r0-
+chr12473724891NR_024540_exon_9_0_chr1_24738_r0-
+chr12932029370NR_024540_exon_10_0_chr1_29321_r0-
+chr13461035174NR_026818_exon_0_0_chr1_34611_r0-
+chr13461035174NR_026820_exon_0_0_chr1_34611_r0-
+chr13527635481NR_026818_exon_1_0_chr1_35277_r0-
+chr13527635481NR_026820_exon_1_0_chr1_35277_r0-
+chr13572036081NR_026818_exon_2_0_chr1_35721_r0-
+chr13572036081NR_026820_exon_2_0_chr1_35721_r0-
+root@localhost:~/tutorial# grep "&gt;" sequences.fa &gt; sequences.txt
+root@localhost:~/tutorial# git
+usage: git [-v | --version] [-h | --help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;]
+           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
+           [--super-prefix=&lt;path&gt;] [--config-env=&lt;name&gt;=&lt;envvar&gt;]
+           &lt;command&gt; [&lt;args&gt;]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help &lt;command&gt;' or 'git help &lt;concept&gt;'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+root@localhost:~/tutorial# base64 exons.fixed.bed 
+Y2hyMQkxMTg3MwkxMjIyNwlOUl8wNDYwMThfZXhvbl8wXzBfY2hyMV8xMTg3NF9mCTAJKwpjaHIx
+CTEyNjEyCTEyNzIxCU5SXzA0NjAxOF9leG9uXzFfMF9jaHIxXzEyNjEzX2YJMAkrCmNocjEJMTQz
+NjEJMTQ4MjkJTlJfMDI0NTQwX2V4b25fMF8wX2NocjFfMTQzNjJfcgkwCS0KY2hyMQkxNDk2OQkx
+NTAzOAlOUl8wMjQ1NDBfZXhvbl8xXzBfY2hyMV8xNDk3MF9yCTAJLQpjaHIxCTE1Nzk1CTE1OTQ3
+CU5SXzAyNDU0MF9leG9uXzJfMF9jaHIxXzE1Nzk2X3IJMAktCmNocjEJMTY2MDYJMTY3NjUJTlJf
+MDI0NTQwX2V4b25fM18wX2NocjFfMTY2MDdfcgkwCS0KY2hyMQkxNjg1NwkxNzA1NQlOUl8wMjQ1
+NDBfZXhvbl80XzBfY2hyMV8xNjg1OF9yCTAJLQpjaHIxCTE3MjMyCTE3MzY4CU5SXzAyNDU0MF9l
+eG9uXzVfMF9jaHIxXzE3MjMzX3IJMAktCmNocjEJMTc2MDUJMTc3NDIJTlJfMDI0NTQwX2V4b25f
+Nl8wX2NocjFfMTc2MDZfcgkwCS0KY2hyMQkxNzkxNAkxODA2MQlOUl8wMjQ1NDBfZXhvbl83XzBf
+Y2hyMV8xNzkxNV9yCTAJLQpjaHIxCTE4MjY3CTE4MzY2CU5SXzAyNDU0MF9leG9uXzhfMF9jaHIx
+XzE4MjY4X3IJMAktCmNocjEJMjQ3MzcJMjQ4OTEJTlJfMDI0NTQwX2V4b25fOV8wX2NocjFfMjQ3
+MzhfcgkwCS0KY2hyMQkyOTMyMAkyOTM3MAlOUl8wMjQ1NDBfZXhvbl8xMF8wX2NocjFfMjkzMjFf
+cgkwCS0KY2hyMQkzNDYxMAkzNTE3NAlOUl8wMjY4MThfZXhvbl8wXzBfY2hyMV8zNDYxMV9yCTAJ
+LQpjaHIxCTM0NjEwCTM1MTc0CU5SXzAyNjgyMF9leG9uXzBfMF9jaHIxXzM0NjExX3IJMAktCmNo
+cjEJMzUyNzYJMzU0ODEJTlJfMDI2ODE4X2V4b25fMV8wX2NocjFfMzUyNzdfcgkwCS0KY2hyMQkz
+NTI3NgkzNTQ4MQlOUl8wMjY4MjBfZXhvbl8xXzBfY2hyMV8zNTI3N19yCTAJLQpjaHIxCTM1NzIw
+CTM2MDgxCU5SXzAyNjgxOF9leG9uXzJfMF9jaHIxXzM1NzIxX3IJMAktCmNocjEJMzU3MjAJMzYw
+ODEJTlJfMDI2ODIwX2V4b25fMl8wX2NocjFfMzU3MjFfcgkwCS0K
 root@localhost:~/tutorial# </pre></body></html>
